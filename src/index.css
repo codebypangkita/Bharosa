@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F8F0EB;
+  --color-surface: #FFF9F5;
+  --color-surface-soft: #F1E3D9;
+  --color-primary: #784331;
+  --color-primary-hover: #613424;
+  --color-primary-soft: #E9D1C3;
+  --color-sage: #89A27D;
+  --color-sage-dark: #536D4D;
+  --color-text: #34251F;
+  --color-text-secondary: #806D63;
+  --color-border: #E8D9D0;
+  --color-danger: #A84037;
+  --color-danger-soft: #F7E4DF;
+  --color-warning: #A56B25;
+  --color-warning-soft: #F5EBD6;
+  --color-success: #426C4D;
+  --color-success-soft: #E5EEE2;
+  --color-white: #FFFFFF;
+
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", "Noto Sans Devanagari", "Noto Sans Bengali", sans-serif;
+
+  --radius-card: 24px;
+  --radius-button: 16px;
+  --radius-input: 16px;
+}
+
+:root {
+  --color-background: #F8F0EB;
+  --color-surface: #FFF9F5;
+  --color-surface-soft: #F1E3D9;
+  --color-primary: #784331;
+  --color-primary-hover: #613424;
+  --color-primary-soft: #E9D1C3;
+  --color-sage: #89A27D;
+  --color-sage-dark: #536D4D;
+  --color-text: #34251F;
+  --color-text-secondary: #806D63;
+  --color-border: #E8D9D0;
+  --color-danger: #A84037;
+  --color-danger-soft: #F7E4DF;
+  --color-warning: #A56B25;
+  --color-warning-soft: #F5EBD6;
+  --color-success: #426C4D;
+  --color-success-soft: #E5EEE2;
+  --color-white: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Subtle organic card shadow */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(120, 67, 49, 0.06), 0 2px 6px -1px rgba(120, 67, 49, 0.04);
+}
+
+.shadow-card-hover {
+  box-shadow: 0 10px 30px -4px rgba(120, 67, 49, 0.12), 0 4px 10px -2px rgba(120, 67, 49, 0.06);
+}
+
+/* Print Styles */
+@media print {
+  header, nav, .no-print, button, .bottom-nav {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+  }
+  .print-card {
+    border: 1px solid #CCCCCC !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}
